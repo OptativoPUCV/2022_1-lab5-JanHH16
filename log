@@ -35,3 +35,14 @@ ju., 21 de abr. de 2022 15:57:29:
  tests:  3|8
 total_score: 0/70
 2392ba5
+ju., 21 de abr. de 2022 16:02:09: 
+ treemap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+treemap.c: In function 'createTreeMap':
+treemap.c:44:24: error: 'lower_than_int' undeclared (first use in this function)
+     tM -> lower_than = lower_than_int;
+                        ^~~~~~~~~~~~~~
+treemap.c:44:24: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+8b5f5a2
