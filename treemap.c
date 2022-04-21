@@ -88,7 +88,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         }
         
     }
-    return nodoAux;
+    return nodoAux->pair;
     
 }
 
