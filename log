@@ -46,3 +46,9 @@ treemap.c:44:24: error: 'lower_than_int' undeclared (first use in this function)
 treemap.c:44:24: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 8b5f5a2
+ju., 21 de abr. de 2022 16:02:25: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|7
+total_score: 5/70
+07e45d3
