@@ -79,7 +79,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
     nodoAux = tree->root;
     while (nodoAux != NULL)
     {
-        if(key == nodoAux->pair->key) return nodoAux->pair;
+        if(key == nodoAux->pair->key) return nodoAux;
         else
         {
             if(key > (nodoAux->pair->key)) nodoAux = nodoAux->right;
@@ -88,7 +88,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         }
         
     }
-    return nodoAux->pair;
+    return nodoAux;
     
 }
 
