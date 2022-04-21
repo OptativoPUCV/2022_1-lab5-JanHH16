@@ -86,3 +86,8 @@ treemap.c:79:13: error: assignment from incompatible pointer type [-Werror=incom
 cc1.exe: all warnings being treated as errors
 Compilation failed
 7033241
+ju., 21 de abr. de 2022 18:14:13: 
+ treemap.c | 15 +++------------
+ 1 file changed, 3 insertions(+), 12 deletions(-)
+ tests:  0|0
+c636beb
