@@ -110,7 +110,7 @@ void eraseTreeMap(TreeMap * tree, void* key){
 
 Pair * searchTreeMap(TreeMap * tree, void* key) 
 {
-    if(tree != NULL)
+    if(tree != NULL && tree->root != NULL)
     {
         TreeNode *nodoAux;
         nodoAux = tree->root;
