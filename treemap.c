@@ -91,6 +91,7 @@ TreeNode * minimum(TreeNode * x){
         nodoAux = nodoAux->left;
     }
     return nodoAux;*/
+    return NULL;
 }
 
 
