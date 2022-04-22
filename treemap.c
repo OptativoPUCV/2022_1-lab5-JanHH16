@@ -89,7 +89,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
                 nodoAux = nodoAux ->left;
         }
     }
-    else return NULL;
+    //else return NULL;
     return NULL;
 }
 
