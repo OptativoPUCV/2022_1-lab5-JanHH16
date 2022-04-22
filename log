@@ -169,3 +169,8 @@ treemap.c:55:15: error: variable 'padre' set but not used [-Werror=unused-but-se
 cc1.exe: all warnings being treated as errors
 Compilation failed
 e0bc8bb
+vi., 22 de abr. de 2022 13:35:11: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|0
+d89e70e

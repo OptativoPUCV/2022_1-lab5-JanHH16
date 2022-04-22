@@ -52,11 +52,11 @@ void insertTreeMap(TreeMap * tree, void* key, void * value)
     if(tree->root == NULL) return;
     TreeNode *nodoAux;
     nodoAux = tree->root;
-    TreeNode *padre = NULL;
+    //TreeNode *padre = NULL;
     
     while(nodoAux != NULL)
     {
-        padre = nodoAux;
+        //padre = nodoAux;
         if(tree->lower_than(nodoAux->pair->key,key))
             nodoAux = nodoAux->right;
         else if(tree->lower_than(key,nodoAux->pair->key))
