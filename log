@@ -174,3 +174,14 @@ vi., 22 de abr. de 2022 13:35:11:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 d89e70e
+vi., 22 de abr. de 2022 13:36:10: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+treemap.c: In function 'searchTreeMap':
+treemap.c:98:62: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+             if(is_equal(tree,nodoAux->pair->key,key)) return nodoAux;
+                                                              ^~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2da59c8
