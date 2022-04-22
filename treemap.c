@@ -81,6 +81,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         nodoAux = tree->root;
         while(nodoAux)
         {
+            tree->current = nodoAux;
             if(is_equal(tree,nodoAux->pair->key,key)) return nodoAux->pair;
             if(tree->lower_than(nodoAux->pair->key,key) == 1)
                 nodoAux = nodoAux ->right;
