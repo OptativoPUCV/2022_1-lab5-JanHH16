@@ -259,7 +259,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 
 Pair * upperBound(TreeMap * tree, void* key) 
 {
-    TreeNode *nodoAux;
+    /*TreeNode *nodoAux;
     nodoAux = tree->current;
     while(nodoAux)
     {
@@ -279,7 +279,7 @@ Pair * upperBound(TreeMap * tree, void* key)
                     //else return NULL;
                 }
             }
-    }
+    }*/
     return NULL;
 }
 
