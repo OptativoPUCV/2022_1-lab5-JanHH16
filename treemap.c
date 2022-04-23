@@ -127,7 +127,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
                         nodoAux = nodoAux->left;
                     else return NULL;
                 }
-                    
                 else
                 {
                     if(nodoAux->left != NULL)
@@ -143,7 +142,7 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         }
     }
     else return NULL;
-    //return NULL;
+    return NULL;
 }
 
 
