@@ -294,6 +294,15 @@ Pair * firstTreeMap(TreeMap * tree)
     return first->pair;
 }
 
-Pair * nextTreeMap(TreeMap * tree) {
+Pair * nextTreeMap(TreeMap * tree) 
+{
+    TreeNode *nodoAux;
+    nodoAux = tree->current;
+    if(nodoAux->right != NULL)
+    {
+        nodoAux = nodoAux->right;
+        tree->current = nodoAux;
+        return nodoAux->pair;
+    }
     return NULL;
 }
