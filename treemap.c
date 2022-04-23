@@ -110,26 +110,42 @@ void removeNode(TreeMap * tree, TreeNode* node)
         TreeNode *nodoAux;
         TreeNode *padre;
         nodoAux = node->left;
-        while(nodoAux->right != NULL)
+        if(nodoAux->right != NULL)
         {
-            nodoAux =  nodoAux->right;
-        }
-        node = nodoAux;
-        padre =  nodoAux->parent;
-        if(nodoAux->left == NULL)
-        {
-            padre->right = NULL;
+            while(nodoAux->right != NULL)
+            {
+                nodoAux =  nodoAux->right;
+            }
+            node = nodoAux;
+            padre =  nodoAux->parent;
+            if(nodoAux->left == NULL)
+            {
+                padre->right = NULL;
+            }
+            else
+                padre->right = nodoAux->left;
+            free(nodoAux);
+            return;
         }
         else
-            padre->right = nodoAux->left;
-        free(nodoAux);
-        return;
+        {
+            node = nodoAux;
+            padre =  nodoAux->parent;
+            if(nodoAux->left == NULL)
+            {
+                padre->right = NULL;
+            }
+            else
+                padre->right = nodoAux->left;
+            free(nodoAux);
+            return;
+        }
+        
     }
     // Caso 2: con solo un hijo.
     // Caso 2.1: hijo izquierdo.
     if(node->left != NULL && node->right == NULL)
     {
-        //TreeNode *nodoAux;
         if(node->pair->key > node->parent->pair->key)
         {
             if(node->left != NULL){
@@ -160,12 +176,6 @@ void removeNode(TreeMap * tree, TreeNode* node)
                 return;
             }
         }
-        //nodoAux = node->left;
-        //nodoAux->parent = node->parent;
-        //nodoAux->parent->left= nodoAux;
-        //node->parent->left = nodoAux;
-        //free(node);
-        //return;
     }
     // Caso 2.2: hijo derecho.
     if(node->right != NULL && node->left == NULL)
@@ -200,13 +210,6 @@ void removeNode(TreeMap * tree, TreeNode* node)
                 return;
             }
         }
-        //TreeNode *nodoAux;
-        //nodoAux = node->right;
-        //nodoAux->parent = node->parent;
-        //nodoAux->parent->left = nodoAux;
-        //node->parent->right = nodoAux;
-        //free(node);
-        //return;
     }
 }
 
