@@ -298,6 +298,21 @@ Pair * nextTreeMap(TreeMap * tree)
 {
     TreeNode *nodoAux;
     nodoAux = tree->current;
+    while(nodoAux)
+    {
+        if(nodoAux->right != NULL)
+        {
+            nodoAux = nodoAux->right;
+            while(nodoAux->left != NULL)
+            {
+                nodoAux = nodoAux->left;
+            }
+            return nodoAux->pair;
+
+        }
+    }
+
+    /*
     if(nodoAux->right != NULL)
     {
         nodoAux = nodoAux->right;
@@ -312,11 +327,10 @@ Pair * nextTreeMap(TreeMap * tree)
             {
                 nodoAux = nodoAux->parent;
                 tree->current = nodoAux;
-                printf("%d", *(int*) nodoAux->pair->key);
                 return nodoAux->pair;
             }
                    
         }
-    }
+    }*/
     return NULL;
 }
