@@ -304,5 +304,13 @@ Pair * nextTreeMap(TreeMap * tree)
         tree->current = nodoAux;
         return nodoAux->pair;
     }
+    else
+    {
+        if(nodoAux->right ==  NULL)
+        {
+            if(nodoAux->parent != NULL)
+                return nodoAux->parent;   
+        }
+    }
     return NULL;
 }
