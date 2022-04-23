@@ -118,15 +118,32 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         while(nodoAux)
         {
             tree->current = nodoAux;
-            if(is_equal(tree,nodoAux->pair->key,key)) return nodoAux->pair;
+            if(is_equal(tree,nodoAux->pair->key,key) == 1) return nodoAux->pair;
+            else
+            {
+                if(tree->lower_than(key,nodoAux->pair->key) == 1)
+                {
+                    if(nodoAux->left != NULL)
+                        nodoAux = nodoAux->left;
+                    else return NULL;
+                }
+                    
+                else
+                {
+                    if(nodoAux->left != NULL)
+                        nodoAux = nodoAux->right;
+                    else return NULL;
+                }
+            }
+            /*
             if(tree->lower_than (nodoAux->pair->key,key) == 1)
                 nodoAux = nodoAux ->right;
-            if(tree->lower_than (key,nodoAux->pair->key) == 1)
-                nodoAux = nodoAux ->left;
+            if(tree->lower_than(key,nodoAux->pair->key) == 1)
+                nodoAux = nodoAux ->left;*/ 
         }
     }
-    //else return NULL;
-    return NULL;
+    else return NULL;
+    //return NULL;
 }
 
 
