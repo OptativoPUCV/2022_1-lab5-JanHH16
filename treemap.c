@@ -270,13 +270,13 @@ Pair * upperBound(TreeMap * tree, void* key)
                 {
                     if(nodoAux->left != NULL)
                         nodoAux = nodoAux->left;
-                    else return NULL;
+                    //else return NULL;
                 }
                 else
                 {
                     if(nodoAux->left != NULL)
                         nodoAux = nodoAux->right;
-                    else return NULL;
+                    //else return NULL;
                 }
             }
     }
