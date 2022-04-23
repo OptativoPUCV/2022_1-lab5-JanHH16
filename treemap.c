@@ -310,6 +310,14 @@ Pair * nextTreeMap(TreeMap * tree)
             return nodoAux->pair;
 
         }
+        else
+        {
+            if(tree->current->pair->key < tree->current->parent->pair->key)
+            {
+                nodoAux = tree->current;
+                return nodoAux->pair;
+            }
+        }
     }
 
     /*
