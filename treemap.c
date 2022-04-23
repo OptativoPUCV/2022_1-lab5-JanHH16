@@ -136,7 +136,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
         }
     }
     else return NULL;
-    //return NULL;
 }
 
 
