@@ -128,7 +128,8 @@ void removeNode(TreeMap * tree, TreeNode* node)
         TreeNode *nodoAux;
         nodoAux = node->left;
         nodoAux->parent = node->parent;
-        node->parent->left = nodoAux;
+        nodoAux->parent->left= nodoAux;
+        //node->parent->left = nodoAux;
         free(node);
         return;
     }
