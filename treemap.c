@@ -260,11 +260,11 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 
 Pair * upperBound(TreeMap * tree, void* key) 
 {
-    TreeNode *nodoAux;
+    /*TreeNode *nodoAux;
     nodoAux = tree->current;
-    if(searchTreeMap(tree,key) != NULL)
-        return nodoAux->pair;
-    return nodoAux->pair;
+    if(searchTreeMap(tree, key) != NULL)
+        return nodoAux->pair;*/
+    return NULL;
 }
 
 Pair * firstTreeMap(TreeMap * tree) 
