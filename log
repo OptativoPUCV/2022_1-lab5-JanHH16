@@ -529,3 +529,9 @@ treemap.c:316:17: error: expected ';' before 'return'
                  ^~~~~~
 Compilation failed
 d1c6344
+sá., 23 de abr. de 2022 15:37:36: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  20|3
+total_score: 45/70
+3a9311f

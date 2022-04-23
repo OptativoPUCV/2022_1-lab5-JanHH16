@@ -312,7 +312,7 @@ Pair * nextTreeMap(TreeMap * tree)
             {
                 nodoAux = nodoAux->parent;
                 tree->current = nodoAux;
-                printf("%d", *(int*) nodoAux->pair->key)
+                printf("%d", *(int*) nodoAux->pair->key);
                 return nodoAux->pair;
             }
                    
