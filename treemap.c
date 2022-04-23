@@ -271,7 +271,10 @@ Pair * firstTreeMap(TreeMap * tree)
 {
     TreeNode *first;
     first = tree->root;
-    minimum(first);
+    while(first->left != NULL)
+    {
+        first = first->left;
+    }
     return first->pair;
 }
 
