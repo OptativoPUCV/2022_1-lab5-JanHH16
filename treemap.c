@@ -267,7 +267,11 @@ Pair * upperBound(TreeMap * tree, void* key) {
     return NULL;
 }
 
-Pair * firstTreeMap(TreeMap * tree) {
+Pair * firstTreeMap(TreeMap * tree) 
+{
+    TreeNode *first;
+    first = tree->root;
+    minimum(first);
     return NULL;
 }
 
