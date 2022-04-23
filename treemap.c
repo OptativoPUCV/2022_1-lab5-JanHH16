@@ -309,7 +309,7 @@ Pair * nextTreeMap(TreeMap * tree)
         if(nodoAux->right ==  NULL)
         {
             if(nodoAux->parent != NULL)
-                return nodoAux->parent;   
+                return nodoAux->pair;   
         }
     }
     return NULL;
