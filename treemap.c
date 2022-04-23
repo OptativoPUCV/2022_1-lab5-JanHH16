@@ -125,23 +125,75 @@ void removeNode(TreeMap * tree, TreeNode* node)
     }
     if(node->left != NULL && node->right == NULL)
     {
-        TreeNode *nodoAux;
-        nodoAux = node->left;
-        nodoAux->parent = node->parent;
-        nodoAux->parent->left= nodoAux;
-        node->parent->left = nodoAux;
-        free(node);
-        return;
+        //TreeNode *nodoAux;
+        if(node->pair->key > node->parent->pair->key)
+        {
+            if(node->left != NULL){
+                node->parent->right = node->left;
+                free(node);
+                return;
+            }
+            if(node->right != NULL){
+                node->parent->right = node->right;
+                free(node);
+                return;
+            }       
+        }
+        else
+        {
+            if(node->left != NULL){
+                node->parent->right = node->left;
+                free(node);
+                return;
+            }
+            if(node->right != NULL){
+                node->parent->right = node->right;
+                free(node);
+                return;
+            }
+        }
+        //nodoAux = node->left;
+        //nodoAux->parent = node->parent;
+        //nodoAux->parent->left= nodoAux;
+        //node->parent->left = nodoAux;
+        //free(node);
+        //return;
     }
     if(node->right != NULL && node->left == NULL)
     {
-        TreeNode *nodoAux;
-        nodoAux = node->right;
-        nodoAux->parent = node->parent;
-        nodoAux->parent->left = nodoAux;
-        node->parent->right = nodoAux;
-        free(node);
-        return;
+        if(node->pair->key > node->parent->pair->key)
+        {
+            if(node->left != NULL){
+                node->parent->right = node->left;
+                free(node);
+                return;
+            }
+            if(node->right != NULL){
+                node->parent->right = node->right;
+                free(node);
+                return;
+            }       
+        }
+        else
+        {
+            if(node->left != NULL){
+                node->parent->right = node->left;
+                free(node);
+                return;
+            }
+            if(node->right != NULL){
+                node->parent->right = node->right;
+                free(node);
+                return;
+            }
+        }
+        //TreeNode *nodoAux;
+        //nodoAux = node->right;
+        //nodoAux->parent = node->parent;
+        //nodoAux->parent->left = nodoAux;
+        //node->parent->right = nodoAux;
+        //free(node);
+        //return;
     }
 }
 
