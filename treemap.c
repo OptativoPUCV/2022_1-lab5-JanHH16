@@ -257,13 +257,29 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
     return NULL;
 }
 
-
 Pair * upperBound(TreeMap * tree, void* key) 
 {
-    /*TreeNode *nodoAux;
+    TreeNode *nodoAux;
     nodoAux = tree->current;
-    if(searchTreeMap(tree, key) != NULL)
-        return nodoAux->pair;*/
+    while(nodoAux)
+    {
+        if(is_equal(tree,nodoAux->pair->key,key) == 1) return nodoAux->pair;
+            else
+            {
+                if(tree->lower_than(key,nodoAux->pair->key) == 1)
+                {
+                    if(nodoAux->left != NULL)
+                        nodoAux = nodoAux->left;
+                    else return NULL;
+                }
+                else
+                {
+                    if(nodoAux->left != NULL)
+                        nodoAux = nodoAux->right;
+                    else return NULL;
+                }
+            }
+    }
     return NULL;
 }
 
