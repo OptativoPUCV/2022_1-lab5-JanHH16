@@ -296,6 +296,12 @@ Pair * firstTreeMap(TreeMap * tree)
 
 Pair * nextTreeMap(TreeMap * tree) 
 {
+    if(tree->current->right != NULL)
+    {
+        tree->current = minimum(tree->current->right);
+        return tree->current->pair;
+    }
+    /*
     TreeNode *nodoAux;
     nodoAux = tree->current;
     while(nodoAux)
@@ -320,7 +326,7 @@ Pair * nextTreeMap(TreeMap * tree)
         }
     }
 
-    /*
+    
     if(nodoAux->right != NULL)
     {
         nodoAux = nodoAux->right;
