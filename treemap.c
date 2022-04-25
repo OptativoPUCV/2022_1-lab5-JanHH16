@@ -135,14 +135,7 @@ void removeNode(TreeMap * tree, TreeNode* node)
             node->left = nodoAux->left;
             node->parent = padre->parent;
             node->right = padre->right;
-            /*if(nodoAux->left == NULL)
-            {
-                padre->right = NULL;
-            }
-            else
-                padre->right = nodoAux->left;*/
             free(nodoAux);
-            //free(padre);
             return;
         }
         
@@ -259,27 +252,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 
 Pair * upperBound(TreeMap * tree, void* key) 
 {
-    TreeNode *nodoAux;
-    nodoAux = tree->current;
-    while(nodoAux)
-    {
-        if(is_equal(tree,nodoAux->pair->key,key) == 1) return nodoAux->pair;
-            else
-            {
-                if(tree->lower_than(key,nodoAux->pair->key) == 1)
-                {
-                    if(nodoAux->left != NULL)
-                        nodoAux = nodoAux->left;
-                    //else return NULL;
-                }
-                else
-                {
-                    if(nodoAux->left != NULL)
-                        nodoAux = nodoAux->right;
-                    //else return NULL;
-                }
-            }
-    }
     return NULL;
 }
 
